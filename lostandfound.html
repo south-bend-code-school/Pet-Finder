@@ -1,0 +1,211 @@
+<!Doctype html>
+
+<html>
+
+<head>
+  <title> Lost and Found </title>
+  <link rel="stylesheet" type="text/css" href="style2.0.css">
+  <link rel="shortcut icon" type="image/x-icon" href="./pictures/logo.png" />
+  <link href='https://fonts.googleapis.com/css?family=Cabin:400,700,600' rel='stylesheet' type='text/css'>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script src="./script.js"></script>
+</head>
+
+<body>
+
+  <div id="lafheader" class="header">
+    <div id=logo></div>
+
+    <h1 id="title">Pet Finder</h1>
+
+    <div id="navbar">
+      <a href="./index.html"><button> Home </button></a>
+      <a href="./lostandfound.html"><button> Lost and Found </button></a>
+      <a href="./shelters.html">  <button> Shelters </button></a>
+      <a href="./abusedirectory.html"><button> Abuse Directory </button></a>
+    </div>
+  </div>
+
+  <div id="bar"></div>
+
+  <div class="content">
+
+
+
+    <div id="openmodal" class="capmodal">
+        <div>
+          <div id="capheader">
+            <h2>Create A Post</h2>
+          </div>
+
+          <div id="lofradio">
+            <form id="typeForm">
+              <input type="radio" name="lof" value="lost" checked />I've Lost My Pet<br />
+              <input type="radio" name="lof" value="found" />I've Found A Lost Pet<br />
+            </form>
+          </div>
+
+          <div id="yourinfo">
+            <h3>Your Info</h3>
+            <form>
+              First name:
+              <input type="text" name="firstname"><br>
+              <br />
+              Last name:
+              <input type="text" name="lastname"><br />
+              <br />
+              Email:
+              <input type="email" name="email"><br />
+              <br />
+              Phone:
+              <input type="tel" name="phone"><br />
+            </form>
+          </div>
+
+          <div id="petinfo">
+            <h3>Pet Info</h3>
+
+            <form id="petform1">
+              Name:
+              <input id="petName" type="text" name="petname" /><br />
+              <br />
+              Location Zip Code:
+              <input id="zipCode" type="text" name="locationzip" /><br />
+            </form>
+
+            <form id="petform2">
+              <input type="radio" name="pettype" value="dogpet" checked />Dog<br />
+              <input type="radio" name="pettype" value="catpet" />Cat<br />
+              <input type="radio" name="pettype" value="otherpet" />Other<br />
+            </form>
+          </div>
+
+          <div id="description">
+            <div id="textarea">
+              <form>
+                <h5>Description:</h5>
+                <textarea id="description" rows="10" cols="50"></textarea>
+              </form>
+            </div>
+
+            <div id="photoupload">
+              <h5>Photo</h5>
+              <div id="petphoto"></div><br />
+              <button id="upload">Upload</button>
+            </div>
+          </div>
+
+          <div class="capbuttons">
+            <a href="#close"><button>Cancel</button></a>
+            <button id="submit">Submit</button>
+          </div>
+
+        </div>
+    </div>
+
+
+
+    <div id="sidebar">
+        <a href="#openmodal"><button>Create A Post</button></a>
+
+        <h4>Filter Results</h4>
+        <form class="filter">
+          <input type="radio" name="situation" value="lost" checked /> Lost<br />
+          <input type="radio" name="situation" value="found" /> Found<br />
+        </form>
+
+        <h4> Type of Pet </h4>
+        <form class="filter">
+          <input type="radio" name="pet" value="dog" checked /> Dog<br />
+          <input type="radio" name="pet" value="cat" /> Cat<br />
+          <input type="radio" name="pet" value="other" /> Other<br />
+        </form>
+
+        <div id="apply">
+          <button>Apply</button>
+        </div>
+    </div>
+
+    <div id="sort">
+      <h4>Sort By</h4>
+      <form class="filter">
+      <input type="radio" name="sortby" value="newest" checked />Newest<br />
+      <input type="radio" name="sortby" value="closest" />Closest<br />
+    </form>
+    </div>
+
+    <div id="results">
+      <h3 class="statement">Lost and Found</h3>
+
+      <div class="containleft">
+        <div id="result1" class="resultbackground"></div>
+        <p>
+          Name: Sample <br />
+          Description: Sample <br />
+          Last Seen: Sample <br />
+        </p>
+        <button>Contact</button>
+      </div>
+
+      <div class="containright">
+        <div id="result2" class="resultbackground"></div>
+        <p>
+          Name: Sample <br />
+          Description: Sample <br />
+          Last Seen: Sample <br />
+        </p>
+        <button>Contact</button>
+      </div>
+
+      <div class="containleft">
+        <div id="result3" class="resultbackground"></div>
+        <p>
+          Name: Sample <br />
+          Description: Sample <br />
+          Last Seen: Sample <br />
+        </p>
+        <button>Contact</button>
+      </div>
+
+      <div class="containright">
+        <div id="result4" class="resultbackground"></div>
+        <p>
+          Name: Sample <br />
+          Description: Sample <br />
+          Last Seen: Sample <br />
+        </p>
+        <button>Contact</button>
+      </div>
+
+      <div class="containleft">
+        <div id="result5" class="resultbackground"></div>
+        <p>
+          Name: Sample <br />
+          Description: Sample <br />
+          Last Seen: Sample <br />
+        </p>
+        <button>Contact</button>
+      </div>
+
+      <div class="containright">
+        <div id="result6" class="resultbackground"></div>
+        <p>
+          Name: Sample <br />
+          Description: Sample <br />
+          Last Seen: Sample <br />
+        </p>
+        <button>Contact</button>
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <h5 id="copyright">Copyright 2016</h5>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

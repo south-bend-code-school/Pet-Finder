@@ -1,0 +1,552 @@
+/*Shared*/
+body{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0px;
+}
+.content{
+  background-color: #236467;
+}
+#bar{
+  height: 5px;
+  length: 100%;
+  background-color: black;
+}
+#footer{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #803F15;
+  margin-top: 64px;
+  font-family: 'Cabin';
+  font-weight: 400;
+  clear: both;
+}
+#copyright{
+  margin: 0px;
+}
+.header{
+  text-align: center;
+  height: 290px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  top: 0;
+}
+#logo{
+  height: 180px;
+  width: 180px;
+  float: left;
+  background-image: url("./pictures/logo.png");
+  background-position: center;
+  background-size: 100%, 100%;
+  background-repeat: no-repeat;
+}
+#title{
+  text-align: left;
+  color: black;
+  margin-left: 200px;
+  margin-top: 0px;
+  font-size: 100px;
+  padding-top: 30px;
+  font-family: 'Cabin';
+  font-weight: 700;
+}
+#navbar{
+  position: relative;
+  margin-top: 100px;
+  margin-left: 35px;
+  text-align: left;
+}
+#navbar button{
+  border: none;
+  border-radius: 2px;
+  font-size: 15px;
+  background-color: white;
+  color: black;
+  font-family: 'Cabin';
+  font-weight: 400;
+}
+#navbar button:hover{
+  background-color: grey;
+  color: black;
+}
+.statement {
+  font-size: 30px;
+  margin: 0px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-family: 'Cabin';
+  font-weight: 600;
+}
+
+/*Headers*/
+#homeheader{
+  background-image: url("./pictures/petdog.jpg");
+}
+#lafheader{
+  background-image: url("./pictures/german.jpg");
+}
+#sheltersheader{
+  background-image: url("./pictures/catheader.jpg");
+}
+#abuseheader{
+  background-image: url("./pictures/abuseheader.jpg");
+}
+
+/*Home Page*/
+.pagetitles{
+  font-size: 30px;
+  margin-top: 20px;
+  font-family: 'Cabin';
+  font-weight: 600;
+}
+#lafcontainer{
+  height: 340px;
+  width: 95%;
+  background-color: #805D15;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+ #laf{
+   margin-top: 32px;
+   height: 220px;
+   width: 95%;
+   background-image: url('./pictures/lost-and-found-pets.jpg');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   display: inline-block;
+   box-shadow: 15px 15px 15px #553900;
+ }
+ #adcontainer{
+   height: 500px;
+   width: 40%;
+   background-color: #803F15;
+   margin-left: 7%;
+   margin-top: 5%;
+   margin-bottom: 5%;
+   display: block;
+   float: left;
+ }
+ #ad{
+   height: 380px;
+   width: 90%;
+   background-image: url('./pictures/Animal-Cruelty-Case-008.jpg');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin-top: 25px;
+   display: inline-block;
+   box-shadow: 15px 15px 15px #552100;
+ }
+ #snmcontainer{
+   height: 500px;
+   width: 40%;
+   background-color: #803F15;
+   margin-right: 7%;
+   margin-top: 5%;
+   margin-bottom: 5%;
+   display: block;
+   float: right;
+ }
+ #snm{
+   height: 380px;
+   width: 90%;
+   background-image: url('./pictures/shelter.jpg');
+   background-position: right;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   margin-top: 25px;
+   margin-left: 10px;
+   margin-right: 10px;
+   display: inline-block;
+   box-shadow: 15px 15px 15px #552100;
+ }
+ #collage{
+   width: 90%;
+   margin-left: 5%;
+   margin-right: 5%;
+   clear: both;
+   background-color: #805D15;
+   height: 700px;
+ }
+ .collagepicture{
+   border: 2px solid black;
+   width: 20%;
+   height: 200px;
+   position: relative;
+   display: inline-block;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   top: 40px;
+ }
+ #one{
+   background-image: url('./pictures/Asher3.jpg');
+ }
+ #two{
+   background-image: url('./pictures/one.jpg');
+ }
+ #three{
+   background-image: url('./pictures/cateyes.jpg');
+ }
+ #four{
+   background-image: url('./pictures/cat2.png');
+ }
+ #five{
+   background-image: url('./pictures/cat1.png');
+ }
+ #six{
+   background-image: url('./pictures/squad.jpg');
+ }
+ #seven{
+   background-image: url('./pictures/eight.jpg');
+ }
+ #eight{
+   background-image: url('./pictures/nine.jpg');
+ }
+ #nine{
+   background-image: url('./pictures/Cooper.jpg');
+   background-position: center top;
+ }
+ #ten{
+   background-image: url('./pictures/Baylie.jpg');
+ }
+ #eleven{
+   background-image: url('./pictures/asher2.jpg');
+   background-position: center top;
+ }
+ #twelve{
+   background-image: url('./pictures/asher1.jpg');
+   background-position: 50% 25%;
+ }
+
+/*lost and found*/
+#sidebar{
+  text-align: left;
+  width: 10%;
+  padding-left: 25px;
+  padding-top: 21px;
+  float: left;
+}
+.filter{
+  font-family: 'Cabin';
+  font-weight: 400;
+}
+#sidebar h4{
+  font-size: 20px;
+  font-family: 'Cabin';
+  font-weight: 600;
+}
+#sidebar button{
+  border: none;
+  border-radius: 2px;
+  font-size: 15px;
+  background-color: white;
+  color: black;
+  font-family: 'Cabin';
+  font-weight: 400;
+}
+#sidebar button:hover{
+  background-color: grey;
+  color: black;
+}
+#apply{
+  padding-top: 20px;
+}
+#sort{
+  text-align: left;
+  width: 7%;
+  float: right;
+}
+#sort h4{
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Cabin';
+  font-weight: 600;
+}
+#results{
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  height: 1800px;
+}
+#results button{
+  font-family: 'Cabin';
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  border-radius: 2px;
+  background-color: white;
+
+}
+#results button:hover{
+  background-color: grey;
+  color: black;
+}
+.containleft{
+  margin-top: 50px;
+  width: 47%;
+  height: 515px;
+  float: left;
+  background-color: #805D15;
+  font-family: 'Cabin';
+  font-weight: 400;
+}
+.containright{
+  margin-top: 50px;
+  width: 47%;
+  height: 515px;
+  float: right;
+  background-color: #805D15;
+  font-family: 'Cabin';
+  font-weight: 400;
+}
+.resultbackground{
+  display: inline-block;
+  margin-top: 23px;
+  width: 90%;
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 15px 15px 15px #553900;
+}
+#result1{
+  background-image: url("./pictures/dog.jpg");
+}
+#result2{
+  background-image: url("./pictures/dog.jpg");
+}
+#result3{
+  background-image: url("./pictures/dog.jpg");
+}
+#result4{
+  background-image: url("./pictures/dog.jpg");
+}
+#result5{
+  background-image: url("./pictures/dog.jpg");
+}
+#result6{
+  background-image: url("./pictures/dog.jpg");
+}
+.capmodal{
+    position: fixed;
+    font-family: 'Cabin';
+    font-weight: 400;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+}
+.capmodal:target{
+    opacity:1;
+    pointer-events: auto;
+}
+.capmodal > div{
+    width: 65%;
+    height: 75%;
+    position: relative;
+    margin: 7% auto;
+    background-color: #EDEDED;
+}
+#capheader{
+  width: 100%;
+  height: 10%;
+  background-color: #805D15;
+}
+#capheader h2{
+  margin: 0px;
+  padding-top: 13px;
+}
+#lofradio{
+  width: 20%;
+  margin-left: 42%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+#yourinfo{
+  text-align: center;
+  float: right;
+  width: 35%;
+}
+#yourinfo form{
+  text-align: right;
+  margin-right: 25%;
+}
+#petinfo{
+  text-align: center;
+  float: left;
+  width: 50%;
+}
+#petform1{
+  text-align: right;
+  float: right;
+}
+#petform2{
+  text-align: left;
+  margin-left: 20%;
+}
+#description{
+  float: left;
+  width: 65%;
+  margin-top: 75px;
+}
+#description h5{
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+#textarea{
+  float: left;
+  margin-left: 30px;
+}
+#photoupload{
+  float: right;
+  margin-right: 60px;
+}
+#petphoto{
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  clear: both;
+  display: inline-block;
+}
+#upload{
+  font-family: 'Cabin';
+  font-weight: 400;
+  font-size: 14px;
+  float: right;
+  border: none;
+  border-radius: 2px;
+  background-color: #805D15;
+  color: white;
+}
+#upload:hover{
+  background-color: grey;
+  color: black;
+}
+.capbuttons{
+  float: right;
+  height: 30px;
+  width: 30%;
+  padding-top: 175px;
+}
+.capbuttons button{
+  border: none;
+  border-radius: 2px;
+  font-size: 20px;
+  background-color: #805D15;
+  color: white;
+  font-family: 'Cabin';
+  font-weight: 400;
+}
+.capbuttons button:hover{
+  background-color: grey;
+  color: black;
+}
+
+/*Shelters*/
+#sheltersearch{
+  font-family: 'Cabin';
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+#maps{
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
+  height: 550px;
+  background-color: #803F15;
+}
+#maps iframe{
+  margin-top: 20px;
+}
+#searchbar{
+  width: 50%;
+  height: 19px;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-top: 20px;
+}
+#searchbar input{
+  width: 175px;
+}
+#searchbar button{
+  font-size: 12px;
+  border: none;
+  border-radius: 2px;
+  background-color: white;
+  font-family: 'Cabin';
+  font-weight: 600;
+  width: 40px;
+}
+#searchbar button:hover{
+  background-color: grey;
+  color: black;
+}
+.shelterlinks{
+  margin-top: 25px;
+  border: none;
+  border-radius: 2px;
+  font-size: 15px;
+  background-color: white;
+  color: black;
+  font-family: 'Cabin';
+  font-weight: 600;
+}
+.shelterlinks:hover{
+  background-color: grey;
+  color: black;
+}
+.descriptions{
+  font-family: 'Cabin';
+  font-weight: 400;
+  font-size: 15;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+.leftlink{
+  height: 160px;
+  width: 35%;
+  float: left;
+  background-color: #805D15;
+  margin-left: 10%;
+  margin-top: 40px;
+  border: 3px solid black;
+}
+.rightlink{
+  height: 160px;
+  width: 35%;
+  float: right;
+  background-color: #805D15;
+  margin-right: 10%;
+  margin-top: 40px;
+  border: 3px solid black;
+}
+#linkscontain{
+  display: inline-block;
+}
+
+/*Abuse Directory*/
+#prevention{
+  font-family: 'Cabin';
+  font-weight: 400;
+  font-size: 16px;
+}

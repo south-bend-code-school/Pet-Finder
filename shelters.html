@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Shelters Near You</title>
+  <link rel="stylesheet" href="style2.0.css" media="screen" title="no title" charset="utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="./pictures/logo.png" />
+  <link href='https://fonts.googleapis.com/css?family=Cabin:400,700,600' rel='stylesheet' type='text/css'>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script src="./script.js"></script>
+</head>
+
+<body>
+
+  <div id="sheltersheader" class="header">
+    <div id=logo></div>
+
+    <h1 id="title">Pet Finder</h1>
+
+    <div id="navbar">
+      <a href="./index.html"><button> Home </button></a>
+      <a href="./lostandfound.html"><button> Lost and Found </button></a>
+      <a href="./shelters.html">  <button> Shelters </button></a>
+      <a href="./abusedirectory.html"><button> Abuse Directory </button></a>
+    </div>
+  </div>
+
+  <div id="bar"></div>
+
+  <div class="content">
+
+    <div>
+      <h3 class="statement">Shelters</h3>
+      <h3 id="sheltersearch">Search</h3>
+    </div>
+
+    <div id="maps">
+      <div id="searchbar">
+        <input type="text" name="Location">
+        <button>Go</button>
+      </div>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d190680.8201372157!2d-86.41947761176556!3d41.69056298606804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spet+shelters+!5e0!3m2!1sen!2sus!4v1462318544969" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <div id="linkscontain">
+
+      <div class="leftlink">
+        <a href="http://www.humanesocietystjc.org/"><button class="shelterlinks">Humane Society of St. Joseph County</button></a><br>
+        <p class="descriptions">
+          2506 Grape Rd<br>
+          (574) 255-4726<br>
+        </p>
+      </div>
+
+      <div class="rightlink">
+        <a href="http://www.petrefuge.com/"><button class="shelterlinks">Pet Refuge Inc</button></a><br>
+        <p class="descriptions">
+          4626 S Burnett Dr<br>
+          (574) 231-1122<br>
+        </p>
+      </div>
+
+      <div class="leftlink">
+        <a href="http://www.humanesocietystjc.org/"><button class="shelterlinks">Humane Society of St. Joseph County</button></a><br>
+        <p class="descriptions">
+          2506 Grape Rd<br>
+          (574) 255-4726<br>
+        </p>
+      </div>
+
+      <div class="rightlink">
+        <a href="http://www.petrefuge.com/"><button class="shelterlinks">Pet Refuge Inc</button></a><br>
+        <p class="descriptions">4626 S Burnett Dr<br>
+          (574) 231-1122<br>
+        </p>
+      </div>
+
+      <div class="leftlink">
+        <a href="http://www.humanesocietystjc.org/"><button class="shelterlinks">Humane Society of St. Joseph County</button></a><br>
+        <p class="descriptions">
+          2506 Grape Rd<br>
+          (574) 255-4726<br>
+        </p>
+      </div>
+
+      <div class="rightlink">
+        <a href="http://www.petrefuge.com/"><button class="shelterlinks">Pet Refuge Inc</button></a><br>
+        <p class="descriptions">
+          4626 S Burnett Dr<br>
+          (574) 231-1122<br>
+        </p>
+      </div>
+
+    </div>
+
+    <div id="footer">
+      <h5 id="copyright">Copyright 2016</h5>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
