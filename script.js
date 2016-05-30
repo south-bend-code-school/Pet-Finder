@@ -13,13 +13,17 @@
 
     $( "#submit" ).click(function() {
 
+      var fName = $('#fname').val();
+      var lName = $('#lname').val();
+      var email = $('#email').val();
+      var phone = $('#phone').val();
       var statusType = $('input[name=lof]:checked', '#typeForm').val()
       var petType = $('input[name=pettype]:checked', '#petform2').val()
       var petName = $('#petName').val();
       var zipCode = $('#zipCode').val();
       var description = $('#description').val();
 
-      writeNewPost(statusType, petType,petName,zipCode,description,'homer','simpson','homer@sbcs.com', '123-123-1231');
+      writeNewPost(statusType, petType, petName, zipCode, description, fName, lName, email, phone);
     });
 
 
