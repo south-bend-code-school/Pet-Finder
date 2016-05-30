@@ -5,17 +5,16 @@ var allPostsSection = document.getElementById('all-posts-list');
 /**
  * Creates a post element.
  */
-function createPostElement(name, description, email, picPath) {
+function createPostElement(petName, email, ownerName, picPath) {
     console.log("Creating Post");
   var html =
       '<div class="containleft">' +
         '<div id="result6" class="resultbackground"></div>' +
-        '<p>'+
+        '<p>' +
         '<div class="name"></div>' +
-        '<div class="description"</div>' +
-        '<div class ="email"></div>' +
+        '<div class="email"</div>' +
+        '<div class ="owner"></div>' +
         '</p>' +
-        '<button>Contact</button>' +
      '</div>';
 
   // Create the DOM element from the HTML.
@@ -25,9 +24,9 @@ function createPostElement(name, description, email, picPath) {
   //componentHandler.upgradeElements(postElement.getElementsByClassName('mdl-textfield')[0]);
 
   // Set values.
-  postElement.getElementsByClassName('name')[0].innerText = "Pet Name: " + name;
-  postElement.getElementsByClassName('description')[0].innerText = "Description: " + description;
-  //postElement.getElementsByClassName('email')[0].innerText = "Email: " + email;
+  postElement.getElementsByClassName('name')[0].innerText = "Pet Name: " + petName;
+  postElement.getElementsByClassName('email')[0].innerText = "Email: " + email;
+  //postElement.getElementsByClassName('owner')[0].innerText = "Owner: " + ownerName;
     
   return postElement;
 }
