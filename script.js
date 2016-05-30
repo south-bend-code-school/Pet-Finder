@@ -10,6 +10,14 @@
       storageBucket: "sbcs-pet-finder.appspot.com",
     };
     firebase.initializeApp(config);
+    
+    // Firebase storage
+    var storage = firebase.storage();
+    var storageRef = storage.ref();
+    var imagesRef = storageRef.child('images');
+    
+    // Path Variable
+    var picPath = "";
 
     $( "#submit" ).click(function() {
 
@@ -23,9 +31,31 @@
       var zipCode = $('#zipCode').val();
       var description = $('#description').val();
 
-      writeNewPost(statusType, petType, petName, zipCode, description, fName, lName, email, phone);
+      writeNewPost(statusType, petType, petName, zipCode, description, fName, lName, email, phone, picPath);
     });
 
+    $("#upload").click(function() {
+        console.log("Upload button pressed");
+        
+        // Picture
+        var selectedFile = document.getElementById('myfiles').files[0];
+        
+        // Firebase Paths
+        var path = "images/" + $('#petName').val() + "_" + $('#zipCode').val() + "_" + selectedFile.name;
+        picPath = path;
+        var pathRef = storageRef.child(path)
+        
+        // Upload
+        var uploadTask = pathRef.put(selectedFile);
+        uploadTask.on('state_changed', function(snapshot){
+        }, function(error) {
+            console.log("Error uploading file");
+        }, function() {
+            var downloadURL = uploadTask.snapshot.downloadURL;
+            console.log("File uploaded successfully");
+        });
+        
+    });
 
     // $("#upload").click(function() {
     //   alert("clicked upload");
@@ -37,7 +67,7 @@
     //   });
     // });
 
-    function writeNewPost(statusType, petType, petName, zipCode, desc, firstName, lastName, email, phone) {
+    function writeNewPost(statusType, petType, petName, zipCode, desc, firstName, lastName, email, phone, picPath) {
       // A post entry.
       var postData = {
         statusType: statusType,
@@ -48,7 +78,8 @@
         firstName: firstName,
         lastName: lastName,
         email: email,
-        phone: phone
+        phone: phone,
+        picPath: picPath
       };
 
       // Get a key for a new Post.
