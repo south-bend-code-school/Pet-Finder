@@ -32,6 +32,7 @@
       var description = $('#description').val();
 
       writeNewPost(statusType, petType, petName, zipCode, description, fName, lName, email, phone, picPath);
+      window.location.replace('http://www3.nd.edu/~acrawfis/sbcc/pet/lostandfound.html#close');
     });
 
     $("#upload").click(function() {
@@ -57,16 +58,7 @@
         
     });
 
-    // $("#upload").click(function() {
-    //   alert("clicked upload");
-    //   // This is not working yet
-    //   uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, {
-    //     'complete': function() {
-    //       console.log('upload complete!');
-    //     }
-    //   });
-    // });
-
+   
     function writeNewPost(statusType, petType, petName, zipCode, desc, firstName, lastName, email, phone, picPath) {
       // A post entry.
       var postData = {
