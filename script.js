@@ -10,55 +10,45 @@
       storageBucket: "sbcs-pet-finder.appspot.com",
     };
     firebase.initializeApp(config);
-    
+
     // Firebase storage
     var storage = firebase.storage();
     var storageRef = storage.ref();
     var imagesRef = storageRef.child('images');
-    
-    // Path Variable
-    var picPath = "";
 
     $( "#submit" ).click(function() {
 
-      var fName = $('#fname').val();
-      var lName = $('#lname').val();
-      var email = $('#email').val();
-      var phone = $('#phone').val();
-      var statusType = $('input[name=lof]:checked', '#typeForm').val()
-      var petType = $('input[name=pettype]:checked', '#petform2').val()
-      var petName = $('#petName').val();
-      var zipCode = $('#zipCode').val();
-      var description = $('#description').val();
+      // Picture
+      var selectedFile = document.getElementById('myfiles').files[0];
+      // Firebase Paths
+      var path = "images/" + $('#petName').val() + "_" + $('#zipCode').val() + "_" + selectedFile.name;
+      var pathRef = storageRef.child(path)
 
-      writeNewPost(statusType, petType, petName, zipCode, description, fName, lName, email, phone, picPath);
-      window.location.replace('./lostandfound.html#close');
+      // Upload
+      var uploadTask = pathRef.put(selectedFile);
+      uploadTask.on('state_changed', function(snapshot){
+      }, function(error) {
+          console.log("Error uploading file");
+      }, function() {
+          var downloadURL = uploadTask.snapshot.downloadURL;
+          console.log("File uploaded successfully");
+          var fName = $('#fname').val();
+          var lName = $('#lname').val();
+          var email = $('#email').val();
+          var phone = $('#phone').val();
+          var statusType = $('input[name=lof]:checked', '#typeForm').val()
+          var petType = $('input[name=pettype]:checked', '#petform2').val()
+          var petName = $('#petName').val();
+          var zipCode = $('#zipCode').val();
+          var description = $('#description').val();
+
+          writeNewPost(statusType, petType, petName, zipCode, description, fName, lName, email, phone, downloadURL);
+          window.location.replace('./lostandfound.html#close');
+      });
+
+
     });
 
-    $("#upload").click(function() {
-        console.log("Upload button pressed");
-        
-        // Picture
-        var selectedFile = document.getElementById('myfiles').files[0];
-        
-        // Firebase Paths
-        var path = "images/" + $('#petName').val() + "_" + $('#zipCode').val() + "_" + selectedFile.name;
-        picPath = path;
-        var pathRef = storageRef.child(path)
-        
-        // Upload
-        var uploadTask = pathRef.put(selectedFile);
-        uploadTask.on('state_changed', function(snapshot){
-        }, function(error) {
-            console.log("Error uploading file");
-        }, function() {
-            var downloadURL = uploadTask.snapshot.downloadURL;
-            console.log("File uploaded successfully");
-        });
-        
-    });
-
-   
     function writeNewPost(statusType, petType, petName, zipCode, desc, firstName, lastName, email, phone, picPath) {
       // A post entry.
       var postData = {

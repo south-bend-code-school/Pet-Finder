@@ -1,26 +1,13 @@
 [debug] ----------------------------------------------------------------------
-[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\General\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] CLI Version:  3.0.0
-[debug] Platform:     win32
-[debug] Node Version: v4.4.5
-[debug] Time:         Tue May 24 2016 18:47:44 GMT-0400 (Eastern Daylight Time)
-[debug] ----------------------------------------------------------------------
-[debug] 
-[info] Starting Firebase development server...
-[info] 
-[warn] !  No Firebase project directory detected. Serving static content from C:\Users\General\Desktop\Pet Finder 2.0\Pet Finder 2.0
-[info] 
-[info] Server listening at: http://localhost:5000
-[debug] ----------------------------------------------------------------------
 [debug] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
 [debug] CLI Version:  3.0.0
 [debug] Platform:     darwin
 [debug] Node Version: v4.4.3
-[debug] Time:         Wed May 25 2016 22:44:53 GMT-0400 (EDT)
+[debug] Time:         Mon May 30 2016 22:07:10 GMT-0400 (EDT)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [info] Starting Firebase development server...
 [info] 
-[warn] ⚠  No Firebase project directory detected. Serving static content from /Users/cfreder2/Desktop/Pet Finder 2.0
+[warn] ⚠  No Firebase project directory detected. Serving static content from /Users/cfreder2/Desktop/Pet Finder
 [info] 
 [info] Server listening at: http://localhost:5000

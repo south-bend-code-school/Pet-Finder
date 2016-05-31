@@ -2,18 +2,6 @@
 
 <html>
 
-<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyD9VfODUT3DWnOLZsE9M3WCs4zYdRyAIiM",
-    authDomain: "sbcs-pet-finder.firebaseapp.com",
-    databaseURL: "https://sbcs-pet-finder.firebaseio.com",
-    storageBucket: "sbcs-pet-finder.appspot.com",
-  };
-  firebase.initializeApp(config);
-</script>
-
 <head>
   <title> Lost and Found </title>
   <link rel="stylesheet" type="text/css" href="style2.0.css">
@@ -23,7 +11,7 @@
   <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
   <script src="./script.js"></script>
-  
+
 </head>
 
 <body>
@@ -37,7 +25,7 @@
       <a href="./index.html"><button> Home </button></a>
       <a href="./lostandfound.html"><button> Lost and Found </button></a>
       <a href="./shelters.html">  <button> Shelters </button></a>
-      <a href="./abusedirectory.html"><button> Abuse Directory </button></a>
+      <a href="./abusedirectory.html"><button> Report Abuse </button></a>
     </div>
   </div>
 
@@ -95,7 +83,7 @@
             </form>
           </div>
 
-          <div id="description">
+          <div>
             <div id="textarea">
               <form>
                 <h5>Description:</h5>
@@ -103,12 +91,7 @@
               </form>
             </div>
 
-            <input id="myfiles" multiple type="file">
-            <div id="photoupload">
-              <h5>Photo</h5>
-              <div id="petphoto"></div><br />
-              <button id="upload">Upload</button>
-            </div>
+            <h3>Select Pet Image</h3><input id="myfiles" type="file"/>
           </div>
 
           <div class="capbuttons">
@@ -126,7 +109,8 @@
 
         <h4>Filter Results</h4>
         <form class="filter">
-          <input type="radio" name="situation" value="lost" checked /> Lost<br />
+          <input type="radio" name="situation" value="boht" checked /> Both<br />
+          <input type="radio" name="situation" value="lost"  /> Lost<br />
           <input type="radio" name="situation" value="found" /> Found<br />
         </form>
 
@@ -150,20 +134,16 @@
     </form>
     </div>
 
-    <main class="mdl-layout__content mdl-color--grey-100">
     <h3 class="statement">Lost and Found</h3>
-    <section class="mdl-grid content" id="all-posts-list" style="display:none">
-        <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
-        </div>
-    </section>
-    </main>
+    <div id="results">
+    </div>
 
     <div id="footer">
       <h5 id="copyright">Copyright 2016</h5>
     </div>
 
   </div>
-  
+
 <script src="./main.js"></script>
 </body>
 

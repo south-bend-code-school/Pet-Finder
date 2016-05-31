@@ -1,34 +1,45 @@
 'use strict';
 
-var allPostsSection = document.getElementById('all-posts-list');
-
+//var allPostsSection = document.getElementById('all-posts-list');
+var postCounter = 0;
 /**
  * Creates a post element.
  */
-function createPostElement(petName, email, ownerName, picPath) {
+
+
+function createPostElement(petName, email, ownerName, desc, phone, statusType, petType, picPath) {
+
     console.log("Creating Post");
+    postCounter = postCounter + 1;
+    var leftRight = "containright";
+    if(postCounter % 2) {
+      leftRight = "containleft";
+    }
+
   var html =
-      '<div class="containleft">' +
-        '<div id="result6" class="resultbackground"></div>' +
+      '<div class="'+leftRight+'">' +
+        '<div style="background-image: url('+picPath+')" class="resultbackground"></div>' +
         '<p>' +
-        '<div class="name"></div>' +
-        '<div class="email"</div>' +
-        '<div class ="owner"></div>' +
+        '<h3>'+statusType+' Pet Name</h3>' +
+        '<div class="name">'+petName+'</div>' +
+        '<h3>Description</h3>' +
+        '<div class="name">'+desc+'</div>' +
+        '<button>Contact</button>' +
         '</p>' +
      '</div>';
 
-  // Create the DOM element from the HTML.
-  var div = document.createElement('div');
-  div.innerHTML = html;
-  var postElement = div.firstChild;
-  //componentHandler.upgradeElements(postElement.getElementsByClassName('mdl-textfield')[0]);
+  $('#results').prepend(html);
 
-  // Set values.
-  postElement.getElementsByClassName('name')[0].innerText = "Pet Name: " + petName;
-  postElement.getElementsByClassName('email')[0].innerText = "Email: " + email;
-  //postElement.getElementsByClassName('owner')[0].innerText = "Owner: " + ownerName;
-    
-  return postElement;
+  // // Create the DOM element from the HTML.
+  // var div = document.createElement('div');
+  // div.innerHTML = html;
+  // var postElement = div.firstChild;
+  //
+  // // Set values.
+  // postElement.getElementsByClassName('name')[0].innerText = "Pet Name: " + petName;
+  // postElement.getElementsByClassName('email')[0].innerText = "Email: " + email;
+
+  // return postElement;
 }
 
 /**
@@ -39,24 +50,31 @@ function startDatabaseQueries() {
   // Get all posts
   var allPostsRef = firebase.database().ref('posts/');
 
-  var fetchPosts = function(postsRef, sectionElement) {
+  var fetchPosts = function(postsRef) {
     console.log("Fetching Data");
     postsRef.on('child_added', function(data) {
         console.log(data.val());
-      var containerElement = sectionElement.getElementsByClassName('posts-container')[0];
-      containerElement.insertBefore(
-          createPostElement(data.val().petName, data.val().email, data.val().firstName + data.val().lastName, data.val().picPath),
-          containerElement.firstChild);
+        createPostElement(data.val().petName,
+                          data.val().email,
+                          data.val().firstName + data.val().lastName,
+                          data.val().desc,
+                          data.val().phone,
+                          data.val().statusType,
+                          data.val().petType,
+                          data.val().picPath);
+      // var containerElement = sectionElement.getElementsByClassName('results')[0];
+      // containerElement.insertBefore(
+      //     createPostElement(data.val().petName, data.val().email, data.val().firstName + data.val().lastName, data.val().picPath),
+      //     containerElement.firstChild);
     console.log("Done inserting");
     });
   };
 
-  fetchPosts(allPostsRef, allPostsSection);
+  fetchPosts(allPostsRef);
 }
 
 // Bindings on load.
 window.addEventListener('load', function() {
     // Listen for auth state changes
-    startDatabaseQueries(); 
-    allPostsSection.style.display = 'block';
+    startDatabaseQueries();
 }, false);

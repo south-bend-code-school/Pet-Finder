@@ -274,7 +274,7 @@ body{
   text-align: center;
   margin-left: 15%;
   margin-right: 15%;
-  height: 1800px;
+  margin-bottom: 15%;
 }
 #results button{
   font-family: 'Cabin';
@@ -290,18 +290,36 @@ body{
   color: black;
 }
 .containleft{
-  margin-top: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   width: 47%;
-  height: 515px;
+  height: 550px;
   float: left;
   background-color: #805D15;
   font-family: 'Cabin';
   font-weight: 400;
 }
+.containleft h3 {
+  padding: 0;
+  margin: 0;
+}
+.containright h3 {
+  padding: 0;
+  margin: 0;
+}
+.containleft button {
+  padding: 4px;
+  margin: 4px;
+}
+.containright button {
+  padding: 4px;
+  margin: 4px;
+}
 .containright{
-  margin-top: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   width: 47%;
-  height: 515px;
+  height: 550px;
   float: right;
   background-color: #805D15;
   font-family: 'Cabin';
@@ -549,4 +567,8 @@ body{
   font-family: 'Cabin';
   font-weight: 400;
   font-size: 16px;
+}
+
+#aspca{
+  height: 200px;
 }
