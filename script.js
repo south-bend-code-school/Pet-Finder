@@ -32,7 +32,7 @@
       var description = $('#description').val();
 
       writeNewPost(statusType, petType, petName, zipCode, description, fName, lName, email, phone, picPath);
-      window.location.replace('http://www3.nd.edu/~acrawfis/sbcc/pet/lostandfound.html#close');
+      window.location.replace('./lostandfound.html#close');
     });
 
     $("#upload").click(function() {
